@@ -12,6 +12,14 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color:#23066d;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 .cf:before, .cf:after {
     content: "";
@@ -21,9 +29,7 @@ body {
 .cf:after {
     clear: both;
 }
-/* =================================
-  FAKE PAGES
-==================================== */
+
 
  ::-webkit-input-placeholder {
     color: #d9d9d9;
@@ -49,6 +55,34 @@ body {
     font-weight: 100;
 }
 /* =================================
+  FAKE PAGES
+==================================== */
+
+.main-container:before {
+    bottom: -5px;
+    left: 2px;
+    right: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-container:after {
+    bottom: -9px;
+    left: 6px;
+    right: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.main-container:before, .main-container:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+/* =================================
   HEADER
 ==================================== */
 .main-title {
@@ -61,3 +95,97 @@ body {
 /* =================================
   THE TO DO LIST
 ==================================== */
+
+
+.main-container {
+    width: 600px;
+    background: white;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
+    position: relative;
+}
+.list-box-title {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.list-box-dropdown-btn{
+  position: relative;
+  cursor: pointer;
+  color:#e6e6e6;
+padding-left: 10px;
+background: none;
+border: none;
+font: 1.5em 'FontAwesome';
+top: 0;
+bottom: 0;
+margin: auto;
+outline: none;
+}
+.list-box-question{
+  border: none;
+  font-style: italic;
+  font-size: 22px;
+  padding: 20px;
+  width:84%;
+  outline: none;
+}
+.list-box-question:focus{
+  font-style: normal;
+}
+.list-item {
+    position: relative;
+    padding-left: 10px;
+    border-top: 1px solid #ededed;
+}
+
+.item-title{
+  font-size: 23px;
+      font-weight:300;
+      margin-left: 35px;
+      padding: 17px ;
+      cursor: pointer;
+}
+.item-check{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.item-checkbox:checked~.item-check:after {
+    position:relative;
+    content: '\2714';
+    color: #6dc9b9;
+    border-color: #cde3df;
+    font-size: 25px;
+  }
+
+  .item-checkbox:checked ~ .item-title{
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+.close-item {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    top:15px;
+    color: #b05b5f;
+    visibility: hidden;
+    cursor: pointer;
+    outline: none;
+  }
+  .list-item:hover .close-item {
+    visibility: visible;
+}
+.item-checkbox {
+    display: none;
+}
