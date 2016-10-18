@@ -125,14 +125,13 @@ outline: none;
 }
 .list-box-question{
   border: none;
-  font-style: italic;
   font-size: 22px;
   padding: 20px;
   width:84%;
   outline: none;
 }
 .list-box-question:focus{
-  font-style: normal;
+    font-style: italic;
 }
 .list-item {
     position: relative;;
