@@ -18,7 +18,7 @@
     <!-- TO DO LIST -->
 
     <section class="main-container">
-        <div class="list-box">
+        <div tabindex="0" class="list-box">
 
 
             <div class="list-box-title">
@@ -28,52 +28,60 @@
                 <input class="list-box-question" placeholder="What needs to be done?">
             </div>
 
+            <div class="dropdown">
+
+                <div class="list-item">
+                    <input type="checkbox" id="item-1" class="item-checkbox">
+                    <label for="item-1" class="item-check"></label>
+                    <div class="item-title" contenteditable="true">Buy milk</div>
+                    <button class="close-item">&times;</button>
+                </div>
+                <div class="list-item">
+                    <input type="checkbox" id="item-2" class="item-checkbox">
+                    <label for="item-2" class="item-check"></label>
+                    <div class="item-title" contenteditable="true">Prepare the report</div>
+                    <button class="close-item">&times;</button>
+                </div>
+
+                <div class="list-item">
+                    <input type="checkbox" id="item-3" class="item-checkbox">
+                    <label for="item-3" class="item-check"></label>
+                    <div class="item-title" contenteditable="true">Call MR. Smyth</div>
+                    <button class="close-item">&times;</button>
+                </div>
+
+                <div class="list-item">
+                    <input type="checkbox" id="item-4" class="item-checkbox">
+                    <label for="item-4" class="item-check"></label>
+                    <div class="item-title" contenteditable="true">Pick up dress from the dry cleaner</div>
+                    <button class="close-item">&times;</button>
+                </div>
 
 
-            <div class="list-item">
-                <input type="checkbox" id="item-1" class="item-checkbox">
-                <label for="item-1" class="item-check"></label>
-                <div class="item-title" contenteditable="true">Buy milk</div>
-                <button class="close-item">&times;</button>
             </div>
-            <div class="list-item">
-                <input type="checkbox" id="item-2" class="item-checkbox">
-                <label for="item-2" class="item-check"></label>
-                <div class="item-title" contenteditable="false">Prepare the report</div>
-                <button class="close-item">&times;</button>
+
+            <div class="footer cf">
+                <div class="footer-title"> 3 items left</div>
+                <nav class="footer-nav">
+                    <button class="footer-btn active">All</button>
+                    <button class="footer-btn">Active</button>
+                    <button class="footer-btn">Completed</button>
+                </nav>
+                <div class="footer-purification">
+                    <button class="footer-btn">Clear completed</button>
+                </div>
             </div>
 
-            <div class="list-item">
-                <input type="checkbox" id="item-3" class="item-checkbox">
-                <label for="item-3" class="item-check"></label>
-                <div class="item-title" contenteditable="true">Call MR. Smyth</div>
-                <button class="close-item">&times;</button>
-            </div>
 
-            <div class="list-item">
-                <input type="checkbox" id="item-4" class="item-checkbox">
-                <label for="item-4" class="item-check"></label>
-                <div class="item-title" contenteditable="true">Pick up dress from the dry cleaner</div>
-                <button class="close-item">&times;</button>
-            </div>
-
-        </div>
-
-        <div class="footer cf">
-            <div class="footer-title"> 3 items left</div>
-            <nav class="footer-nav">
-                <button class="footer-btn active">All</button>
-                <button class="footer-btn">Active</button>
-                <button class="footer-btn">Completed</button>
-            </nav>
-            <div class="footer-purification">
-                <button class="footer-btn">Clear completed</button>
-            </div>
-        </div>
-
-        </div>
 
     </section>
+</body>
+
+</html>
+
+</div>
+
+</section>
 </body>
 
 </html>
