@@ -172,6 +172,10 @@ outline: none;
     color: #d9d9d9;
     text-decoration: line-through;
 }
+.active-checkbox  {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
 
 .close-item {
     position: absolute;
@@ -185,11 +189,17 @@ outline: none;
     visibility: hidden;
 
   }
-  .list-item:hover .close-item {
+  .list-item:hover .close-item .active{
+    visibility: visible;
+}
+.list-item .active{
     visibility: visible;
 }
 .item-title:hover {
   box-shadow: inset 0 0 7px #000000;
+}
+.list-item .active-shadow{
+    box-shadow: inset 0 0 7px #000000;
 }
 .item-title:focus {
   font-style: italic;
@@ -257,6 +267,6 @@ outline: none;
     cursor: pointer;
 }
 
-.footer-link:hover, .footer-link.active, .footer-btn:hover {
+.footer-link:hover, .footer-btn.active, .footer-btn:hover {
     border-color: #ead7d8;
 }
