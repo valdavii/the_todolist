@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color:#23066d;
+    background-color:#a79b85;
 background-image:
 radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
 radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
@@ -54,33 +54,6 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     font-family: Roboto;
     font-weight: 100;
 }
-/* =================================
-  FAKE PAGES
-==================================== */
-
-.main-container:before {
-    bottom: -5px;
-    left: 2px;
-    right: 2px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.main-container:after {
-    bottom: -9px;
-    left: 6px;
-    right: 6px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.main-container:before, .main-container:after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-}
-
 
 /* =================================
   HEADER
@@ -103,6 +76,12 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.1);
     margin: 80px auto;
     position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+        0 10px 0 -5px #f6f6f6,
+        0 10px 1px -4px rgba(0,0,0,0.15),
+        0 20px 0 -10px #f6f6f6,
+        0 20px 1px -9px rgba(0,0,0,0.15);
+
 }
 .list-box-title {
   border-bottom: 1px solid #e6e6e6;
@@ -129,9 +108,10 @@ outline: none;
   padding: 20px;
   width:84%;
   outline: none;
+  font-style: italic;
 }
 .list-box-question:focus{
-    font-style: italic;
+    font-style: normal;
 }
 .list-item {
     position: relative;;
@@ -172,6 +152,10 @@ outline: none;
     color: #d9d9d9;
     text-decoration: line-through;
 }
+.item-title .active-checkbox  {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
 
 .close-item {
     position: absolute;
@@ -185,11 +169,21 @@ outline: none;
     visibility: hidden;
 
   }
-  .list-item:hover .close-item {
+  .item-title:focus~.close-item{
+    opacity: 0;
+  }
+
+.list-item .active{
     visibility: visible;
 }
 .item-title:hover {
   box-shadow: inset 0 0 7px #000000;
+}
+.list-item .active-shadow{
+    box-shadow: inset 0 0 7px #000000;
+}
+.active-shadow:focus {
+  box-shadow: none;
 }
 .item-title:focus {
   font-style: italic;
@@ -197,14 +191,10 @@ outline: none;
   font-weight: lighter;
 }
 
-
-
 .item-checkbox {
     display: none;
 }
-.close-item:active ~ .item-title {
-  visibility: hidden;
-}
+
 
 /*.list-box {
   position: relative;
@@ -257,6 +247,6 @@ outline: none;
     cursor: pointer;
 }
 
-.footer-link:hover, .footer-link.active, .footer-btn:hover {
+.footer-link:hover, .footer-btn.active, .footer-btn:hover {
     border-color: #ead7d8;
 }
